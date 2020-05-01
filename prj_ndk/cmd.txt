@@ -1,0 +1,72 @@
+#1 cygwin here 
+
+#2 
+NDK=/cygdrive/c/cygwin/tmp/hdc_toolchains/android-ndk-r12b
+export NDK 
+echo $NDK 
+
+#2 pwd enter into jni folder 
+#prj_android/prj_ndk/hello/jni
+$$NDK/ndk-build.cmd
+
+
+>>>
+$ $NDK/ndk-build.cmd
+[arm64-v8a] Compile++      : hello <= main.cpp
+
+[arm64-v8a] StaticLibrary  : libstdc++.a
+[arm64-v8a] Executable     : hello
+[arm64-v8a] Install        : hello => libs/arm64-v8a/hello
+[armeabi-v7a] Compile++ thumb: hello <= main.cpp
+[armeabi-v7a] StaticLibrary  : libstdc++.a
+[armeabi-v7a] Executable     : hello
+[armeabi-v7a] Install        : hello => libs/armeabi-v7a/hello
+<<< 
+
+#3 build for another example
+johl@PC11F0B8 ~/expr/exprj/prj_github/prj_android/prj_ndk/hello-jni_lwy/jni
+$ $NDK/ndk-build.cmd
+Android NDK: WARNING: APP_PLATFORM android-24 is larger than android:minSdkVersion 3 in C:/cygwin/home/johl/expr/exprj/prj_github/prj_android/prj_ndk/hello-jni_lwy/AndroidManifest.xml
+[arm64-v8a] Gdbserver      : [aarch64-linux-android-4.9] libs/arm64-v8a/gdbserver
+[arm64-v8a] Gdbsetup       : libs/arm64-v8a/gdb.setup
+[x86_64] Gdbserver      : [x86_64-4.9] libs/x86_64/gdbserver
+[x86_64] Gdbsetup       : libs/x86_64/gdb.setup
+[mips64] Gdbserver      : [mips64el-linux-android-4.9] libs/mips64/gdbserver
+[mips64] Gdbsetup       : libs/mips64/gdb.setup
+[armeabi-v7a] Gdbserver      : [arm-linux-androideabi-4.9] libs/armeabi-v7a/gdbserver
+[armeabi-v7a] Gdbsetup       : libs/armeabi-v7a/gdb.setup
+[armeabi] Gdbserver      : [arm-linux-androideabi-4.9] libs/armeabi/gdbserver
+[armeabi] Gdbsetup       : libs/armeabi/gdb.setup
+[x86] Gdbserver      : [x86-4.9] libs/x86/gdbserver
+[x86] Gdbsetup       : libs/x86/gdb.setup
+[mips] Gdbserver      : [mipsel-linux-android-4.9] libs/mips/gdbserver
+[mips] Gdbsetup       : libs/mips/gdb.setup
+[arm64-v8a] Compile        : hello-jni <= hello-jni.c
+[arm64-v8a] Compile        : hello-jni <= Unix_wrap.c
+[arm64-v8a] SharedLibrary  : libhello-jni.so
+[arm64-v8a] Install        : libhello-jni.so => libs/arm64-v8a/libhello-jni.so
+[x86_64] Compile        : hello-jni <= hello-jni.c
+[x86_64] Compile        : hello-jni <= Unix_wrap.c
+[x86_64] SharedLibrary  : libhello-jni.so
+[x86_64] Install        : libhello-jni.so => libs/x86_64/libhello-jni.so
+[mips64] Compile        : hello-jni <= hello-jni.c
+[mips64] Compile        : hello-jni <= Unix_wrap.c
+[mips64] SharedLibrary  : libhello-jni.so
+[mips64] Install        : libhello-jni.so => libs/mips64/libhello-jni.so
+[armeabi-v7a] Compile thumb  : hello-jni <= hello-jni.c
+[armeabi-v7a] Compile thumb  : hello-jni <= Unix_wrap.c
+[armeabi-v7a] SharedLibrary  : libhello-jni.so
+[armeabi-v7a] Install        : libhello-jni.so => libs/armeabi-v7a/libhello-jni.so
+[armeabi] Compile thumb  : hello-jni <= hello-jni.c
+[armeabi] Compile thumb  : hello-jni <= Unix_wrap.c
+[armeabi] SharedLibrary  : libhello-jni.so
+[armeabi] Install        : libhello-jni.so => libs/armeabi/libhello-jni.so
+[x86] Compile        : hello-jni <= hello-jni.c
+[x86] Compile        : hello-jni <= Unix_wrap.c
+[x86] SharedLibrary  : libhello-jni.so
+[x86] Install        : libhello-jni.so => libs/x86/libhello-jni.so
+[mips] Compile        : hello-jni <= hello-jni.c
+[mips] Compile        : hello-jni <= Unix_wrap.c
+[mips] SharedLibrary  : libhello-jni.so
+[mips] Install        : libhello-jni.so => libs/mips/libhello-jni.so
+
